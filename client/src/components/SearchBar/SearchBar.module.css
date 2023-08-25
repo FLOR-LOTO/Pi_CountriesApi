@@ -1,9 +1,12 @@
 .container {
     display: flex;
     justify-content:center;
-    align-items:end;
+    align-items:center;
     background-color:rgba(232, 30, 30, 0);
     padding: 10px;
+    position: fixed; /* Fija la navegación en la pantalla */
+    top: 58px;
+    right: 7%;
   }
 
   .input {
@@ -20,12 +23,16 @@
     .btnSearch {
       height: 2rem;
       width: 5rem;
-
       font-size: 1rem;
       text-align: center;
-      background-color:white;
+      background-color:#ffcc50;
       color:black;
       font-weight: 600;
       border-radius: 8px;
-      transition-delay: 0.015s;
+      transition-delay: 0.025s;
+      font-family:'Franklin Gothic Medium';
+    }
+    .btnSearch:hover {
+      background-color:black;
+      color:#ffcc50;
     }

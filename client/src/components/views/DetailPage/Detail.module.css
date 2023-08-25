@@ -1,0 +1,16 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#background {
+    background-image: url("../../../../img/Fondo De Pantalla Calendario Junio Fotográfico Gris (1).png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 0;
+    padding: 0;
+}

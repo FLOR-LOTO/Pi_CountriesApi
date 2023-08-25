@@ -1,0 +1,12 @@
+.container {
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url("../../../../img/Beige Aesthetic Photo Collage Vision Board Summer Desktop Wallpaper.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+ };

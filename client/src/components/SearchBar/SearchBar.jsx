@@ -16,12 +16,13 @@ export default function SearchBar ({onSearch}) {
             <input 
             className={style.input} 
             type='search' 
+            placeholder="Ingresa el nombre del país..."
             onChange={handleChange} 
             // value={id}
             /> 
             <button 
             className={style.btnSearch} 
-            onClick={() => onSearch(id)}>Agregar
+            onClick={() => onSearch(id)}>Buscar
             </button>
            
         </div>

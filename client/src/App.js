@@ -1,41 +1,33 @@
 import style from "./App.module.css"
-import Cards from "./components/Cards/Cards.jsx";
-import { useState } from "react"; // hook me da el estado actual para componentes funcionales
 import Nav from "./components/Nav/Nav.jsx";
-import axios from "axios";
-
+import { Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import LandingPage from './components/views/LandingPage/LandingPage.jsx';
+import DetailPage from "./components/views/DetailPage/DetailPage.jsx";
+import FormPage from "./components/views/FormPage/FormPage.jsx"
+import HomePage from "./components/views/HomePage/HomePage.jsx";
+import Error404 from "./components/views/Error404/Error404.jsx";
 
 function App() {
 
-  const [countries, setCountries] = useState([]) //entre los parentesis le indicamos que tipo de dato va a ser, string,array, boolen, etc
+   // Obtiene la ubicación actual
+   const location = useLocation();
 
-  const onSearch = (name) => {  //cada vez que se haga click se deberan agregar los paises al estado,que actualmente es el arreglo vacio
-    
-    axios.get(`http://localhost:3001/countries/?name=${name}`)
-    .then(({ data }) => {
-      // Verificar si el país ya está en el estado por su ID
-      const isCountryAlreadyAdded = countries.some(country => country.name === data.name);
-      
-      if (!isCountryAlreadyAdded && data.name) {
-        // Agregar el país al estado solo si no existe y tiene un nombre válido
-        setCountries((oldCountries) => [...oldCountries, data]);
-      } else if (isCountryAlreadyAdded) {
-        window.alert("El país ya ha sido agregado.");
-      } else {
-        window.alert("No se pudo agregar el país. Verifica los datos.");
-      }
-    })
-    .catch(error => {
-      console.error("Error al obtener el país:", error);
-      window.alert("País no encontrado");
-    });
-};
+   // Decide si se debe mostrar la barra de navegación en función de la ubicación actual
+   const shouldShowNav = location.pathname !== "/";
 
-
-  return (
-      <div className={style.container}>
-        <Nav onSearch={onSearch} />
-        <Cards countries = {countries} />
+ 
+   return (
+     <div className={style.container}>
+       {/* Renderiza la barra de navegación solo si shouldShowNav es true */}
+       {shouldShowNav && <Nav />}
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/countries' element={<HomePage />}/>
+          <Route path='/detail/:id' element={<DetailPage />} />
+          <Route path='/activities' element={<FormPage />} />
+          <Route path='*' element={<Error404 />} />
+        </Routes>
       </div>
   );
 }

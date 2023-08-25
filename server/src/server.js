@@ -10,6 +10,7 @@ server.use(morgan("dev"));
 server.use(express.json());
 server.use(cors());
 
+
 URL_Countries = 'http://localhost:5000/countries'
 
 const apiCountriesData = async () => {
@@ -46,5 +47,9 @@ apiCountriesData();
 
 
 server.use(router);
+
+server.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "path-to-your-frontend", "index.html"));
+  });
 
 module.exports = server;

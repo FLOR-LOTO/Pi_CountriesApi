@@ -1,19 +1,16 @@
 import {cardPropTypes} from "../propTypes.js"
 import style from "./Card.module.css";
+import { Link } from "react-router-dom";
 
-export default function Card ({id, name, continents, capital, subregion, area, population, flags, onClose }) {
+export default function Card ({id, name, flags }) {
 
     return (
         <div className={style.container}>
-            <button onClick={onClose}>X</button> 
-            <h2>{id}</h2>
+            {/* <button className={style.btn} onClick={onClose}>X</button>  */}
             <h2>{name}</h2>
-            <h2>{continents}</h2>
-            <h2>{capital}</h2>
-            <h2>{subregion}</h2>
-            <h2>{area}</h2>
-            <h2>{population}</h2>
+            <Link to={`/detail/${id}`}>
             <img src={flags} alt="" />
+            </Link>
         </div>
     )
 }
