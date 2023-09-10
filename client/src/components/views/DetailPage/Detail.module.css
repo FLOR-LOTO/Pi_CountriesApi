@@ -1,16 +1,50 @@
-
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  max-width: 650px;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 20px;
+  background-color: rgba(247, 247, 247, 0.7); /* Color de fondo con transparencia */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-#background {
-    background-image: url("../../../../img/Fondo De Pantalla Calendario Junio Fotográfico Gris (1).png");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    margin-top: 0;
-    padding: 0;
+.name {
+  font-size: 50px; /* Tamaño de fuente para el nombre */
+  margin-bottom: 10px; /* Espacio inferior para el nombre */
+  text-align: center;
+}
+
+.img {
+  max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+  height: auto; /* Ajusta la altura automáticamente */
+  margin-right: 20px; /* Espacio derecho para la imagen */
+}
+
+.text {
+  font-size: 16px; /* Tamaño de fuente para el texto */
+  line-height: 1.5; /* Espaciado de línea para facilitar la lectura */
+}
+
+ul {
+  list-style: none; /* Quita los marcadores de lista */
+  padding: 0; /* Elimina el espacio interno de la lista */
+}
+
+li {
+  margin-bottom: 10px; /* Espacio inferior entre elementos de la lista */
+}
+
+.activities {
+  margin-top: 20px; /* Espacio superior para las actividades de Venezuela */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 15px; /* Espacio interno */
+  border: 1px solid #ddd; /* Borde alrededor del contenedor */
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.5); /* Ajusta la transparencia aquí */
+}
+
+.activities h3 {
+  font-size: 18px; /* Tamaño de fuente para el título de actividades de Venezuela */
+  margin-bottom: 10px; /* Espacio inferior para el título de actividades */
 }

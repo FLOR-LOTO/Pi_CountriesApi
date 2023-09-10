@@ -12,6 +12,7 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}
   logging: false, 
   native: false, 
 });
+
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
@@ -30,14 +31,19 @@ let capsEntries = entries.map((entry) => [entry[0][0].toUpperCase() + entry[0].s
 sequelize.models = Object.fromEntries(capsEntries);
 
 
-const { Country, Activity} = sequelize.models;
+const { Country, Activity, User} = sequelize.models;
 
+
+// Aca vendrian las relaciones
 Country.belongsToMany(Activity, { through: 'Country_Activity' });
 Activity.belongsToMany(Country, { through: 'Country_Activity' });
-// Aca vendrian las relaciones
+User.belongsToMany(Activity, { through: 'User_Activity' });
+Activity.belongsToMany(User, { through: 'User_Activity' });
+
 // Product.hasMany(Reviews);
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
   conn: sequelize,     // para importart la conexión { conn } = require('./db.js');
 };
+

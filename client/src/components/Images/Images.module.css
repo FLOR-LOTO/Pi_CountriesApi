@@ -1,0 +1,41 @@
+.images {
+  width: 14%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  margin: 0px;
+  margin-right: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow-x: scroll;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  background: linear-gradient(to bottom, #dd3939, #1c1c1c);
+  font-size: 10px;
+  color: #f8f8f8;
+}
+
+.images::-webkit-scrollbar {
+  width: 5px;
+  background-color: #4847478a;
+}
+
+.images::-webkit-scrollbar-thumb {
+  background-color: #dd3939;
+  border-radius: 8px;
+}
+
+.images::-webkit-scrollbar-thumb:hover {
+  background-color: #090909;
+}
+.imageContainer {
+  position: relative;
+  margin-top: 2%;
+}
+.imageContainer:hover {
+  transform: scale(1.05); /* Escala la imagen al 110% en hover */
+  z-index: 1; /* Asegura que la imagen se muestre por encima de las demás */
+  cursor: pointer; /* Cambia el cursor a un puntero en hover */
+}

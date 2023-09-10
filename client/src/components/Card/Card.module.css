@@ -1,27 +1,38 @@
-.container{
-    display: inline-block;
-    flex: 0 0 16%;
-    padding: 8px;
-    margin: 15px;
-    border-radius: 0.8em;
-    background-color:#ffcd5083;
-    border: 1px solid black;
+.cardContainer {
+  display: flex;
+  flex-direction: column; /* Cambiamos a columna para separar verticalmente */
+  align-items: center;
+  justify-content: center; /* Centra horizontal y verticalmente */
+  position: relative;
+  margin: 10px; /* Agregamos margen alrededor del contenedor */
+  padding: 10px; /* Agregamos espacio interno al contenedor */
+  text-align: center; /* Centramos el texto horizontalmente */
+  margin-right: -20%;
+  margin-top: 10px;
 }
 
 h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    background-color: rgba(255, 255, 255, 0.961);
-    margin: 0%;
+  margin: 0;
+  font-size: x-small;
+  color: rgb(4, 4, 4);
+  padding: 2px;
+  position: absolute; /* Posicionamos el título de forma absoluta */
+  top: 0; /* Lo colocamos en la parte superior */
+  left: 0; /* Lo colocamos en la esquina superior izquierda */
+  width: 100%; /* Ancho al 100% del contenedor */
+  opacity: 0; /* Inicialmente, el título estará oculto */
+  transition: opacity 0.3s ease; /* Efecto de transición */
 }
 
+.cardContainer:hover h2 {
+  opacity: 1; /* Mostrar el título cuando el contenedor se encuentra en estado :hover */
+}
 
 img {
-    border: 1px solid black;
+  width: 170px; /* Ancho automático para mantener la proporción */
+  height: 108px; /* Altura fija */
+  border-radius: 0.4em;
+  filter: brightness(1.5);
+  box-shadow: 10px 30px 30px rgba(17, 16, 16, 0.664);
+  margin-top: 15px;
 }
-/* 
-.btn{
-
-} */

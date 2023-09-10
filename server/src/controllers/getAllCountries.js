@@ -1,29 +1,19 @@
-const express = require('express');
-const { Country } = require('../db');
-
+const getAllCountriesHandler = require("../handlers/getAllCountriesHandler.js");
+const getByNameHandler = require("../handlers/getByNameHandler.js");
 
 const getAllCountries = async (req, res) => {
-    try {
-        const { id } = req.query;
+  const { name } = req.query;
+  
+  try {
+    const countries = await getAllCountriesHandler();
+    if(!name) return res.status(200).json(countries)
 
-        if(id) {
-            const upperCaseId = id.toUpperCase();
-            console.log("Searching for:", upperCaseId);
-            const country = await Country.findOne({
-                where: { id: upperCaseId}
-            }); // consulto todos los paises en la DB
+    const country = await getByNameHandler(name);
 
-            if(!country) {
-                return res.status(404).json({message: 'No countries found'})
-            }
-            res.status(200).json(country);
-        } else {
-            const countries = await Country.findAll();
-            res.status(200).json(countries);
-        }
-    } catch (error) {
-        res.status(500).json({error: error.message});
-    }
+    country ? res.status(200).json(country) : res.status(500).json(`${name} no esta en la base de datos`)
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 };
 
 module.exports = getAllCountries;

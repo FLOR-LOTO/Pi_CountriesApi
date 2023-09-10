@@ -1,8 +1,42 @@
-.container {
-  display: flex;
-  flex-wrap: wrap;
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Dos columnas con igual ancho */
+  grid-template-rows: repeat(5, auto); /* Cinco filas con altura automática */
+  gap: 15px;
   align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 8%;
-  }
+  margin-left: 12%;
+  margin-right: 20%;
+  margin-top: 5%;
+}
+
+.paginationContainer {
+  position: fixed;
+  bottom: 20px; /* La barra de paginación se fijará en la parte superior */
+  left: 65%; /* Centramos horizontalmente */
+  transform: translateX(-50%); /* Centramos horizontalmente */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea los botones en la parte superior */
+  margin-top: 10px;
+  margin:1%;
+  width: 80%; /* Ocupa todo el ancho */
+}
+
+.btn{
+  background-color: #353737;
+  box-shadow: 10px 30px 30px rgba(17, 16, 16, 0.537);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;  
+  margin: 1px 20px;
+  cursor: pointer;
+}
+.btn {
+  background-color:#dd3939;
+}
+
+.span {
+  color:black;
+  font-size: medium;
+}

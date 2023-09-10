@@ -1,14 +1,19 @@
-import ReactDOM from 'react-dom';
-import App from './App.js';
-import {BrowserRouter} from "react-router-dom" //nos permite hacer cambios de rutas, conecta a la url del navegador/ se conecta a la api History
-import "./index.css"
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.js";
+import { BrowserRouter } from "react-router-dom";
+import "./index.css";
+import { Provider } from "react-redux";
+import store from "./redux/store.js";
 
+const root = createRoot(document.getElementById("root"));
 
-
-ReactDOM.render(
-  <BrowserRouter>
-  <App/>
-  </BrowserRouter>,  
-  document.getElementById('root') // busca el root en el index.html
+root.render(
+  <Provider store={store}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  </Provider>
 );
-

@@ -1,38 +1,22 @@
 .container {
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    background-color:rgba(232, 30, 30, 0);
-    padding: 10px;
-    position: fixed; /* Fija la navegación en la pantalla */
-    top: 58px;
-    right: 7%;
-  }
-
-  .input {
-    margin-left: 3rem;
-    width: 15rem; 
-    height: 2rem; 
-    text-align: center;
-    color:black;
-    font-size: medium;
+    margin: 5px;
+    margin-left: 60px;
+    margin-right: -265px;
+    position: fixed;
+    top: 10px;
+    right: 40%;
+    z-index: 999;
+    height: 30px;
+    width: 20%;
     border-radius: 8px;
-  
-    }
-    
-    .btnSearch {
-      height: 2rem;
-      width: 5rem;
-      font-size: 1rem;
-      text-align: center;
-      background-color:#ffcc50;
-      color:black;
-      font-weight: 600;
-      border-radius: 8px;
-      transition-delay: 0.025s;
-      font-family:'Franklin Gothic Medium';
-    }
-    .btnSearch:hover {
-      background-color:black;
-      color:#ffcc50;
-    }
+    box-shadow: 0 2px 4px rgba(179, 176, 176, 0.2); /* Agrega una sombra si lo deseas */
+    color: black;
+    text-align: center;
+}
+
+.input{
+    background-color:#353737; 
+    height: 32px;
+}
+
+

@@ -38,8 +38,9 @@ module.exports = (sequelize) => {
     population: {
       type: DataTypes.INTEGER,
       allowNull: true,
-    }
+    },
   },
-  { timestamps: false }
+  { 
+    timestamps: false }
   );
 };

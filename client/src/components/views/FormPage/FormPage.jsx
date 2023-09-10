@@ -1,12 +1,10 @@
 import style from "./FormPage.module.css";
-import Form from "../../Form/Form.jsx";
-
+import FormActivities from "../../Form/FormActivities.jsx";
 
 const FormPage = () => {
-
   return (
     <div className={style.container}>
-      <Form /> 
+      <FormActivities />
     </div>
   );
 };

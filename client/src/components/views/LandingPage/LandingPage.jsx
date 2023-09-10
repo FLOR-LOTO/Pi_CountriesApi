@@ -1,15 +1,13 @@
-import { Link } from "react-router-dom";
-import style from "./Landing.module.css"
+import style from "./Landing.module.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import FormUsers from "../../Form/FormUsers";
 
 const LandingPage = () => {
-
-    return (
-
-    <div className={style.container}>
-        <Link to='/countries'>
-        <button className={style.btn}>Go to Home</button>    
-        </Link>
-        </div>
-)};
+  return (
+    <div className={style.background}>
+      <FormUsers className={style.formUsers} />
+    </div>
+  );
+};
 
 export default LandingPage;
