@@ -9,7 +9,7 @@ export const cardPropTypes = {
   area: PropTypes.number.isRequired,
   population: PropTypes.number.isRequired,
   flags: PropTypes.string.isRequired,
-  onClose: PropTypes.func.isRequired,
+  // onClose: PropTypes.func.isRequired,
 };
 
 export const cardsPropTypes = {
@@ -23,11 +23,15 @@ export const cardsPropTypes = {
       area: PropTypes.number.isRequired,
       population: PropTypes.number.isRequired,
       flags: PropTypes.string.isRequired,
-      onClose: PropTypes.func.isRequired,
+      // onClose: PropTypes.func.isRequired,
     })
   ).isRequired,
 };
 
 export const searchPropTypes = {
   onSearch: PropTypes.func.isRequired,
+};
+
+export const filtersPropTypes = {
+  filterCountries : PropTypes.func.isRequired,
 };

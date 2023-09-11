@@ -1,0 +1,39 @@
+.orderContainer {
+  padding: 0px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.select {
+  border-radius: 5px;
+  background-color: #373635;
+  color: white;
+  border: 1px solid #202020; /* Borde gris */
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra hundida */
+  padding: 2px; /* Espacio interno */
+  font-size: small;
+  margin-top: 1px;
+}
+
+.title {
+  font-size: small;
+  color: #f9f9fd;
+  margin-top: 10px;
+}
+
+.order1 {
+  margin-bottom: 15px;
+  height: 56px;
+  background-color: #3736352d;
+}
+.order2 {
+  margin-bottom: 15px;
+  height: 56px;
+  background-color: #3736352d;
+}
+.order3 {
+  height: 56px;
+  background-color: #3736352d;
+}

@@ -4,24 +4,29 @@
   align-items: center;
   justify-content: center; /* Centra horizontal y verticalmente */
   position: relative;
-  margin: 10px; /* Agregamos margen alrededor del contenedor */
-  padding: 10px; /* Agregamos espacio interno al contenedor */
+  padding: 20px; /* Agregamos espacio interno al contenedor */
   text-align: center; /* Centramos el texto horizontalmente */
-  margin-right: -20%;
-  margin-top: 10px;
+  margin-right: -27%;
+  margin-left: 35%;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  background-color: aliceblue;
 }
 
 h2 {
   margin: 0;
-  font-size: x-small;
-  color: rgb(4, 4, 4);
+  font-size: medium;
+  color: rgb(10, 10, 10);
   padding: 2px;
-  position: absolute; /* Posicionamos el título de forma absoluta */
-  top: 0; /* Lo colocamos en la parte superior */
-  left: 0; /* Lo colocamos en la esquina superior izquierda */
-  width: 100%; /* Ancho al 100% del contenedor */
-  opacity: 0; /* Inicialmente, el título estará oculto */
-  transition: opacity 0.3s ease; /* Efecto de transición */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap; /* Evita el salto de línea del texto */
+  overflow: hidden; /* Oculta el contenido que desborda el ancho */
+  text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el contenido desborda */
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .cardContainer:hover h2 {
@@ -32,7 +37,7 @@ img {
   width: 170px; /* Ancho automático para mantener la proporción */
   height: 108px; /* Altura fija */
   border-radius: 0.4em;
-  filter: brightness(1.5);
+  filter: brightness(1.3);
   box-shadow: 10px 30px 30px rgba(17, 16, 16, 0.664);
   margin-top: 15px;
 }

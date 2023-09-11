@@ -44,18 +44,18 @@ const reducer = (state = initialState, { type, payload }) => {
     case ORDER_COUNTRIES:
       const { orderType, sortOrder } = payload;
       let newOrder;
-    
+
       // Verifica el orden actual y decide si es necesario invertirlo
       if (state.currentOrder && state.currentOrder.orderType === orderType) {
-        newOrder = state.currentOrder.sortOrder === 'Asc' ? 'Desc' : 'Asc';
+        newOrder = state.currentOrder.sortOrder === "Asc" ? "Desc" : "Asc";
       } else {
         newOrder = sortOrder;
       }
-    
+
       switch (orderType) {
-        case 'name':
+        case "name":
           const orderName = [...state.countriesFilter].sort((a, b) => {
-            if (newOrder === 'Asc') return a.name.localeCompare(b.name);
+            if (newOrder === "Asc") return a.name.localeCompare(b.name);
             else return b.name.localeCompare(a.name);
           });
           return {
@@ -63,14 +63,24 @@ const reducer = (state = initialState, { type, payload }) => {
             countriesFilter: orderName,
             currentOrder: { orderType, sortOrder: newOrder },
           };
-        case 'population':
+        case "population":
           const orderPopulation = [...state.countriesFilter].sort((a, b) => {
-            if (newOrder === 'Asc') return a.population - b.population;
+            if (newOrder === "Asc") return a.population - b.population;
             else return b.population - a.population;
           });
           return {
             ...state,
             countriesFilter: orderPopulation,
+            currentOrder: { orderType, sortOrder: newOrder },
+          };
+        case "area":
+          const orderArea = [...state.countriesFilter].sort((a, b) => {
+            if (newOrder === "Asc") return a.area - b.area;
+            else return b.area - a.area;
+          });
+          return {
+            ...state,
+            countriesFilter: orderArea,
             currentOrder: { orderType, sortOrder: newOrder },
           };
       }

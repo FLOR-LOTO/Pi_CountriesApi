@@ -20,8 +20,8 @@ const ImageModal = ({
 
   const modalStyles = {
     position: "fixed",
-    top: 100,
-    left: 250,
+    top: 50,
+    left: 300,
     width: "50%",
     height: "70%",
     display: "flex",
@@ -30,6 +30,7 @@ const ImageModal = ({
     zIndex: 99999,
     backgroundImage: `url(${src})`,
     backgroundSize: "100% 100%",
+    borderRadius: "10px",
   };
 
   return (

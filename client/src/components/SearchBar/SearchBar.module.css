@@ -1,22 +1,25 @@
 .container {
     margin: 5px;
     margin-left: 60px;
-    margin-right: -265px;
+    margin-right: -400px;
     position: fixed;
-    top: 10px;
+    top: 25px;
     right: 40%;
     z-index: 999;
     height: 30px;
-    width: 20%;
+    width: 80%;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(179, 176, 176, 0.2); /* Agrega una sombra si lo deseas */
     color: black;
     text-align: center;
 }
 
 .input{
-    background-color:#353737; 
+    background-color:#494c4c; 
     height: 32px;
+    width: 50%;
+    color: aliceblue;
+    border-radius: 8px;
+    text-align: center;
 }
 
 

@@ -6,11 +6,9 @@ export default function SearchBar({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState(""); // Estado para el término de búsqueda
 
   const handleChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const handleSearch = () => {
-    onSearch(searchTerm);
+    const value = event.target.value;
+    setSearchTerm(value);
+    onSearch(value); // Llama a onSearch con el valor actual del campo de búsqueda
   };
 
   return (
@@ -22,11 +20,10 @@ export default function SearchBar({ onSearch }) {
         value={searchTerm}
         onChange={handleChange}
       />
-      <button className={style.btn} onClick={handleSearch}>
-        Buscar
-      </button>
     </div>
   );
 }
+
+SearchBar.propTypes = searchPropTypes;
 
 SearchBar.propTypes = searchPropTypes;

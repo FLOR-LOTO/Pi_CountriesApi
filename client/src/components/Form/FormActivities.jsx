@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import style from "./FormActivities.module.css";
 import { validations } from "./validations.js";
+import { Link } from "react-router-dom";
 
 const Form = () => {
   const [countries, setCountries] = useState([]);
@@ -73,6 +74,9 @@ const Form = () => {
   return (
     <div className={style.containerForm}>
       <form onSubmit={handleSubmit}>
+        <Link to={"/countries"}>
+          <button className={style.btnBack}>X</button>
+        </Link>
         <h1>Crea una Actividad Turística</h1>
 
         <div className={style.camp}>

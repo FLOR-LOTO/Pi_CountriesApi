@@ -3,8 +3,10 @@ import FormActivities from "../../Form/FormActivities.jsx";
 
 const FormPage = () => {
   return (
-    <div className={style.container}>
-      <FormActivities />
+    <div>
+      <div className={style.container}>
+        <FormActivities />
+      </div>
     </div>
   );
 };

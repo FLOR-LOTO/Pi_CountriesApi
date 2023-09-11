@@ -1,9 +1,9 @@
 .container {
   max-width: 650px;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-right: 30%;
+  margin-top: 2%;
   padding: 20px;
-  background-color: rgba(247, 247, 247, 0.7); /* Color de fondo con transparencia */
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -24,6 +24,8 @@
 .text {
   font-size: 16px; /* Tamaño de fuente para el texto */
   line-height: 1.5; /* Espaciado de línea para facilitar la lectura */
+  background-color: aliceblue;
+  border-radius: 5px;
 }
 
 ul {

@@ -1,12 +1,16 @@
 .container {
-    display:grid;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-image: url("../../../../img/home7.jpg");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
- };
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  padding: 0;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background: linear-gradient(
+    109.6deg,
+    rgba(0, 0, 0, 2) 15.2%,
+    rgb(63, 61, 61) 78.9%
+  );
+}

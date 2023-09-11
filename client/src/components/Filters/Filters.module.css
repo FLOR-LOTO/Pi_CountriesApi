@@ -1,0 +1,29 @@
+.filterContainer {
+    display: flex;
+    flex-direction: row; /* Asegura que los botones se alineen horizontalmente */
+    gap: 30px; /* Ajusta el espacio horizontal entre los botones */
+    margin-bottom: 0;
+    margin-top: 80px;
+    margin-left: 16%;
+    width: 80%;
+  }
+  
+  .btnFilter {
+    flex: 1; /* Distribuye el espacio disponible entre los botones de manera equitativa */
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 5px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.585);
+    border-radius: 4px;
+    height: 32px;
+  }
+  
+  .btnFilter:hover {
+    background-color: rgba(255, 255, 255, 0.745);
+    color: #161616;
+  }

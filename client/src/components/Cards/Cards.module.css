@@ -1,19 +1,21 @@
 .cardsContainer {
+  position: fixed; /* Fija el contenedor en su posición */
+  top: 23%; /* Ajusta la distancia desde la parte superior */
+  left: 14%; /* Ajusta la distancia desde la izquierda */
+  right: 10%; /* Ajusta la distancia desde la derecha */
+  bottom: auto; /* Evita el posicionamiento desde la parte inferior */
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Dos columnas con igual ancho */
-  grid-template-rows: repeat(5, auto); /* Cinco filas con altura automática */
-  gap: 15px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, auto);
+  row-gap: 60px;
   align-items: center;
   justify-content: center;
-  margin-left: 12%;
-  margin-right: 20%;
-  margin-top: 5%;
 }
 
 .paginationContainer {
   position: fixed;
   bottom: 20px; /* La barra de paginación se fijará en la parte superior */
-  left: 65%; /* Centramos horizontalmente */
+  left: 53%; /* Centramos horizontalmente */
   transform: translateX(-50%); /* Centramos horizontalmente */
   display: flex;
   justify-content: center;
@@ -37,6 +39,6 @@
 }
 
 .span {
-  color:black;
+  color:rgb(249, 247, 247);
   font-size: medium;
 }

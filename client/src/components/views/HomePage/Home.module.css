@@ -6,7 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: rgb(220, 226, 232);
+  background: linear-gradient(109.6deg, rgba(0, 0, 0, 2) 15.2%, rgb(63, 61, 61) 78.9%);
   width: 100%;
   height: 100vh;
 }
@@ -15,8 +15,6 @@
   flex-grow: 1;
 }
 
-@media (max-width: 1047px) {
-  .container {
-    flex-direction: column-reverse; /* Cambia la dirección de flex para dispositivos pequeños */
-  }
+.btn {
+  margin-right: 150%;
 }

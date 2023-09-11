@@ -4,6 +4,7 @@ import Cards from "../../Cards/Cards.jsx";
 import style from "./Home.module.css";
 import { getCountries } from "../../../redux/actions/actions.js";
 import { useDispatch } from "react-redux";
+import Filters from "../../Filters/Filters.jsx";
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,9 @@ const HomePage = () => {
 
   return (
     <div className={style.container}>
+      <Filters />
       <SearchBar onSearch={onSearch} />
+
       <div className={style.content}>
         <Cards />
       </div>

@@ -11,13 +11,15 @@ import Images from "./components/Images/Images.jsx";
 function App() {
   const location = useLocation(); // Nos devuelve la ubicación actual
 
-  const shouldShowNav = location.pathname !== "/"; // Decide si se debe mostrar la barra de navegación en función de la ubicación actual
+  const shouldShowNav = location.pathname === "/countries"; // Decide si se debe mostrar la barra de navegación en función de la ubicación actual
+  const isActivitiesRoute = location.pathname !== "/countries"; // Verifica si estamos en la ruta /activities
 
   return (
     <div>
       {/* Renderiza la barra de navegación solo si shouldShowNav es true */}
       {shouldShowNav && <Nav />}
-      <Images />
+      {/* Renderiza Images solo si estamos en la ruta /activities */}
+      {isActivitiesRoute && <Images />}
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
